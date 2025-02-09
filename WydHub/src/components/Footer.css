@@ -1,0 +1,35 @@
+/* Footer.css */
+
+/* Estilo principal do footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Conteúdo do footer */
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #007bff;
+  }
+  
+  
