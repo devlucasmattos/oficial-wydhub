@@ -1,23 +1,9 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import ServerCard from "./components/ServerCard";
+import Home from "./pages/Home";
 import ServerDetail from "./components/ServerDetail";
+import Plans from "./pages/Plans"; // Certifique-se de que Plans está importado
 import servers from "./Data";
-import "./App.css";
 import Footer from "./components/Footer";
-
-const Home = () => (
-  <div className="container">
-    <h5>Página em desenvolvimento</h5>
-    <h1>WydHub</h1>
-    <h2>Encontre o servidor ideal para você!</h2>
-    <div className="server-list">
-      {servers.map(server => (
-        <ServerCard key={server.id} server={server} />
-      ))}
-    </div>
-    <Footer />
-  </div>
-);
 
 const App = () => {
   return (
@@ -25,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/server/:id" element={<ServerDetail servers={servers} />} />
+        <Route path="/plans" element={<Plans />} /> {/* Rota corrigida */}
       </Routes>
       <Footer />
     </Router>
