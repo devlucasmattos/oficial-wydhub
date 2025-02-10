@@ -7,13 +7,15 @@ const ServerCard = ({ server }) => {
 
   return (
     <div className="server-card" onClick={() => navigate(`/server/${server.id}`)}>
-      <img className="server-image" src={server.image} alt={server.name} />
+      <img src={`${import.meta.env.BASE_URL}${server.image}`} alt={server.name} className="server-image" />
       <div className="server-info">
         <h3 className="server-name">{server.name}</h3>
         <p className="server-description">{server.description}</p>
+
       </div>
     </div>
   );
+
 };
 
 ServerCard.propTypes = {
@@ -25,5 +27,6 @@ ServerCard.propTypes = {
     details: PropTypes.string.isRequired,
   }).isRequired,
 };
+
 
 export default ServerCard;

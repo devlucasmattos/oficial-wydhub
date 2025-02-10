@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 const Home = () => (
   <div className="container">
+    <h5>Página em desenvolvimento</h5>
     <h1>WydHub</h1>
     <h2>Encontre o servidor ideal para você!</h2>
     <div className="server-list">

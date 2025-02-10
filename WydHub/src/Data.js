@@ -1,9 +1,10 @@
+
 const servers = [
     {
       id: 1,
       name: "Mythik",
       description: "Rate Médio/Médio -- Online desde: 05/01/25.",
-      image: "./src/assets/images/wyd1.PNG",
+      image: "/images/wyd1.PNG",
       details: "Servidor Mythik possui diversas mecânicas únicas, sem perder a essência do verdadeiro WYD.",
       noticias: "Evento Online!",
       eventoDescription: `💎 Novo Kit Migração de Guilds no Mythik!
@@ -40,7 +41,7 @@ const servers = [
       id: 2,
       name: "Wyd Ryzen",
       description: "Rate: Médio/Hard Lançamento dia 15/02",
-      image: "./src/assets/images/wyd2.PNG",
+      image: "/images/wyd2.PNG",
       details: "Servidor Beta é otimizado para rodar aplicações empresariais de grande porte.",
       noticias: `Notícias:
       
