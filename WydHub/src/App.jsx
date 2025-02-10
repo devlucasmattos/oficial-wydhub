@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import ServerCard from "./components/ServerCard";
 import ServerDetail from "./components/ServerDetail";
 import servers from "./Data";
@@ -14,7 +14,7 @@ const Home = () => (
         <ServerCard key={server.id} server={server} />
       ))}
     </div>
-    <Footer></Footer>
+    <Footer />
   </div>
 );
 
@@ -24,9 +24,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/server/:id" element={<ServerDetail servers={servers} />} />
-        
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 };
