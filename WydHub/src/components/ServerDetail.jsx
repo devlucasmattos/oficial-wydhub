@@ -45,7 +45,7 @@ const ServerDetail = ({ servers }) => {
   return (
     <div className="server-detail">
       {/* Exibe a imagem corretamente */}
-      <img src={`../${server.image}`} alt={server.name} className="server-detail-image" />
+      <img src={`${import.meta.env.BASE_URL}${server.image}`} alt={server.name} className="server-detail-image" />
       <h2 className="server-name">{server.name}</h2>
       
       {/* Renderiza as notícias com quebras de linha */}
