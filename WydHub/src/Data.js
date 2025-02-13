@@ -3,7 +3,7 @@ const servers = [
     id: 1,
     name: "Mythik",
     description: "Rate Médio/Médio Online desde: 05/01/25.",
-    image: "/images/wyd1.PNG",
+    image: "/images/wyd1.png",
     details: "Servidor Mythik possui diversas mecânicas únicas, sem perder a essência do verdadeiro WYD.",
     noticias: "Evento Online!",
     eventoDescription: `💎 Novo Kit Migração de Guilds no Mythik!
@@ -34,13 +34,14 @@ const servers = [
     site: "https://mythik.com.br/",
     discord: "",
     youtube: "",
-    instagram: "https://www.instagram.com/mythikgame/"
+    instagram: "https://www.instagram.com/mythikgame/",
+    highlight: false
   },
   {
     id: 2,
     name: "Wyd Ryzen",
     description: "Rate: Médio/Hard Lançamento dia 15/02",
-    image: "/images/wyd2.PNG",
+    image: "/images/wyd2.png",
     details: "Servidor Beta é otimizado para rodar aplicações empresariais de grande porte.",
     noticias: `Notícias:
     
@@ -59,13 +60,14 @@ const servers = [
     site: "",
     discord: "",
     youtube: "",
-    instagram: ""
+    instagram: "",
+    highlight: false
   },
   {
     id: 3,
     name: "New Wyd",
     description: "Easy/Easy",
-    image: "/images/wyd3.PNG",
+    image: "/images/wyd3.png",
     details: "Servidor Gamma fornece suporte para hospedagem segura e rápida.",
     noticias: "Evento Online!",
     eventoDescription: `🚀 Venha jogar o nosso servidor easy/easy, estamos com 400 onlines nesse exato momento. 🚀
@@ -103,7 +105,8 @@ Traje Odin(30dias)
     site: "https://newwyd.com/",
     discord: "https://discord.gg/gkZysQ2nPe",
     youtube: "",
-    instagram: "https://www.instagram.com/newwydoficial/"
+    instagram: "https://www.instagram.com/newwydoficial/",
+    highlight: false
   }
 ];
 
