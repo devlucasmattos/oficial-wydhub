@@ -1,5 +1,4 @@
-// Footer.jsx
-import "./Footer.css"; // Importando o arquivo CSS para o footer
+import "./Footer.css"; 
 
 const Footer = () => {
   return (

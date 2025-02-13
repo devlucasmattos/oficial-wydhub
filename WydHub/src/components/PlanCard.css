@@ -1,38 +1,64 @@
 .plan-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 250px;
-  }
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+.plan-price {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: -10px 5px 55px 5px;
+
+}
+
+.plan-card li {
   
-  .plan-price {
-    font-size: 20px;
-    color: #28a745;
-    font-weight: bold;
-  }
-  
-  .plan-card ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .plan-card li {
-    margin: 5px 0;
-  }
-  
-  .subscribe-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    
-  }
-  
-  .subscribe-button:hover {
-    background-color: #218838;
-  }
-  
+  font-size: 16px;
+  color: #d4d4d4;
+}
+
+.subscribe-button {
+  background-color: #ffffff;
+  color: rgb(17, 17, 17);
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 80%;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  position: absolute; 
+  bottom: 16px; 
+}
+
+.subscribe-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.subscribe-button:active {
+  transform: scale(0.98);
+}

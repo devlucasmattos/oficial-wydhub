@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import ServerCard from "../components/ServerCard";
 import servers from "../Data";
 import Footer from "../components/Footer";
-import "../pages/Home.css"; // Certifique-se de que o CSS está correto
+import "../pages/Home.css"; 
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,15 +13,18 @@ const Home = () => {
       <h1>WydHub</h1>
       <h2>Encontre o servidor ideal para você!</h2>
 
-      {/* Botão agora está corretamente inserido */}
+      
       <button className="plans-button" onClick={() => navigate("/plans")}>
         📢 Divulgue seu Servidor
       </button>
 
       <div className="server-list">
-        {servers.map((server) => (
-          <ServerCard key={server.id} server={server} />
+         {servers
+        .filter((server) => server.id)
+       .map((server) => (
+       <ServerCard key={server.id} server={server} />
         ))}
+
       </div>
 
       <Footer />

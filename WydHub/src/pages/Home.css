@@ -1,27 +1,56 @@
 .container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .plans-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 20px 0;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  
-  .plans-button:hover {
-    background-color: #0056b3;
-  }
-  
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #121212;
+  min-height: 100vh;
+  margin-bottom: 45px;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.container h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.plans-button {
+  background-color: #ffffff;
+  color: rgb(31, 31, 31);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-bottom: 30px;
+}
+
+.plans-button:hover {
+  background-color: #cfcfcf;
+  transform: scale(1.05);
+}
+
+.server-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+@media (max-width: 768px) {
   .server-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .plans-button {
+    width: 80%;
+  }
+}
