@@ -5,9 +5,21 @@ import "./ServerCard.css";
 const ServerCard = ({ server }) => {
   const navigate = useNavigate();
 
+  const handleClick = () => {
+    window.location.hash = `#/server/${server.id}`;
+    window.location.reload(); // Recarrega a página
+  };
+
   return (
-    <div className="server-card" onClick={() => navigate(`/server/${server.id}`)}>
-      <img src={`${import.meta.env.BASE_URL}${server.image}`} alt={server.name} className="server-image" />
+    <div
+      className="server-card"
+      onClick={handleClick} // Agora chama o handleClick
+    >
+      <img
+        src={`${import.meta.env.BASE_URL}${server.image}`}
+        alt={server.name}
+        className="server-image"
+      />
       <div className="server-info">
         <h3 className="server-name">{server.name}</h3>
         <p className="server-description">{server.description}</p>

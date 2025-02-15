@@ -4,7 +4,7 @@ import "./ServerDetail.css";
 
 const ServerDetail = ({ servers }) => {
   const { id } = useParams();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const server = servers.find((s) => s.id === parseInt(id));
 
@@ -12,7 +12,7 @@ const ServerDetail = ({ servers }) => {
     return <h2>Servidor não encontrado!</h2>;
   }
 
-  const formatEventDescription = (description) => {
+  const formatEventDescription = (description = "") => {
     return description.split("\n").map((line, index) => (
       <span key={index}>
         {line}
@@ -21,7 +21,7 @@ const ServerDetail = ({ servers }) => {
     ));
   };
 
-  const formatNotices = (notices) => {
+  const formatNotices = (notices = "") => {
     return notices.split("\n").map((line, index) => (
       <span key={index}>
         {line}
@@ -43,13 +43,13 @@ const ServerDetail = ({ servers }) => {
 
   return (
     <div className="server-detail">
-      
+      {/* Alterado para navigate("/") */}
       <button className="back-button" onClick={() => navigate("/")}>
         ← Voltar para Home
       </button>
 
       <img
-        src={`${import.meta.env.BASE_URL}${server.image}`}
+        src={server.image}
         alt={server.name}
         className="server-detail-image"
       />
@@ -79,8 +79,8 @@ ServerDetail.propTypes = {
       name: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      noticias: PropTypes.string.isRequired,
-      eventoDescription: PropTypes.string.isRequired,
+      noticias: PropTypes.string,
+      eventoDescription: PropTypes.string,
       whatsapp: PropTypes.string,
       site: PropTypes.string,
       discord: PropTypes.string,

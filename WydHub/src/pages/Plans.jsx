@@ -1,7 +1,6 @@
-import PlanCard from "../components/PlanCard";
-import "./Plans.css"; 
 import { useNavigate } from "react-router-dom";
-
+import PlanCard from "../components/PlanCard";
+import "./Plans.css";
 
 const plans = [
   { name: "Básico", price: "R$ 19,90/mês", features: ["1- Seu servidor na listagem,", "2- Perfil com suas informações,", "3- Até 2 alterações de conteúdo no mês"] },
@@ -10,27 +9,25 @@ const plans = [
 ];
 
 const Plans = () => {
-
   const navigate = useNavigate();
 
-
   return (
-    <div className="plans-container">
+    <div className="plans-container" >
       <h1>Planos de Divulgação</h1>
       <p>Escolha o plano ideal para impulsionar o seu servidor no WydHub!</p>
-      
+
       <div className="plans-list">
         {plans.map((plan, index) => (
           <PlanCard key={index} plan={plan} />
         ))}
-
-        
       </div>
+
       <button className="back-button" onClick={() => navigate("/")}>
         ← Voltar para Home
       </button>
+
+      
     </div>
-    
   );
 };
 

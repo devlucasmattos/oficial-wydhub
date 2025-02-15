@@ -11,25 +11,33 @@ const Home = () => {
 
   // Estados para pesquisa
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredServers, setFilteredServers] = useState(servers);
-
+  const [filteredServers, setFilteredServers] = useState(
+    [...servers].sort((a, b) => b.highlight - a.highlight) // Ordenando os destaques primeiro
+  );
+  const handleClick = () => {
+    window.location.hash = `#/plans`;
+    window.location.reload(); 
+  };
   return (
     <div className="container">
       <h5>Página em desenvolvimento</h5>
       <h1>WydHub</h1>
       <h2>Encontre o servidor ideal para você!</h2>
 
-      {/* Barra de Pesquisa */}
+     
       <SearchBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         servers={servers}
-        setFilteredServers={setFilteredServers}
+        setFilteredServers={(filtered) =>
+          setFilteredServers([...filtered].sort((a, b) => b.highlight - a.highlight))
+        }
       />
 
-      <button className="plans-button" onClick={() => navigate("/plans")}>
-        📢 Divulgue seu Servidor
-      </button>
+<button className="plans-button" onClick={handleClick}>
+  📢 Divulgue seu Servidor
+</button>
+
 
       {/* Lista de Servidores Filtrados */}
       <div className="server-list">

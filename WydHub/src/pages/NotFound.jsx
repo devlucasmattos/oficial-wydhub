@@ -1,4 +1,5 @@
 import "./NotFound.css";
+import { useParams, useNavigate } from "react-router-dom";
 
 const NotFound = () => {
   return (
@@ -6,7 +7,7 @@ const NotFound = () => {
       <img src="./images/imagem404.png" alt="Página não encontrada" className="not-found-image" />
       <h1 className="not-found-title">404 - Página não encontrada</h1>
       <p className="not-found-text">Procurando um drop específico? Não é por aqui.</p>
-      <a href="#/" className="not-found-link">
+      <a href="" className="not-found-link" onClick={() => navigate("/")}>
         Voltar para Home
       </a>
     </div>
