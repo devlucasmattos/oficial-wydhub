@@ -2,9 +2,12 @@ const servers = [
   {
     id: 1,
     name: "Mythik",
-    description: "Rate Médio/Médio Online desde: 05/01/25.",
+    rate: "Médio/Médio",
+    date: "05/01/25",
+    version:"Versão: 7.99",
+    status: "Online desde: ",
     image: "./images/wyd1.png",
-    details: "Servidor Mythik possui diversas mecânicas únicas, sem perder a essência do verdadeiro WYD.",
+    description: "Servidor Mythik possui diversas mecânicas únicas, sem perder a essência do verdadeiro WYD.",
     noticias: "Evento Online!",
     eventoDescription: `💎 Novo Kit Migração de Guilds no Mythik!
     [APROVEITE O EVENTO INICIANTE]
@@ -22,7 +25,6 @@ const servers = [
     - Shire 3 dias
     
     📌 Como Receber o Kit:
-    
     Entre em contato com a administração através do ticket no Discord.
     *Válido somente para novos jogadores
     
@@ -40,12 +42,14 @@ const servers = [
   {
     id: 2,
     name: "Wyd Ryzen",
-    description: "Rate: Médio/Hard Lançamento dia 15/02",
+    rate: "Médio/Hard",
+    date: "15/02/25",
+    version:"Versão: 7.54",
+    status: "Online desde: ",
     image: "./images/wyd2.png",
-    details: "Servidor Beta é otimizado para rodar aplicações empresariais de grande porte.",
-    noticias: `Notícias:
-    
-    🚀 Inauguração WYD Ryzen 754 Original 🚀  
+    description: "Servidor Beta é otimizado para rodar aplicações empresariais de grande porte.",
+    noticias: "Notícias: 🚀 Inauguração WYD Ryzen 754 Original 🚀",
+    eventoDescription: `🚀 Inauguração WYD Ryzen 754 Original 🚀  
     A versão clássica que você sempre sonhou está de volta!  
     ⚔ Inventário 3D  
     ⚔ Retes Médio Hard  
@@ -55,7 +59,6 @@ const servers = [
     ⏰ Horário: 18 horas  
     🎁 Sorteio de Inauguração no Discord!  
     Acesse e participe dessa aventura épica! 🔥`,
-    eventoDescription: "",
     whatsapp: "",
     site: "",
     discord: "",
@@ -66,41 +69,43 @@ const servers = [
   {
     id: 3,
     name: "New Wyd",
-    description: "Easy/Easy",
+    rate: "Easy/Easy",
+    date: "23/01/24",
+    status: "Online desde ",
     image: "./images/wyd3.png",
-    details: "Servidor Gamma fornece suporte para hospedagem segura e rápida.",
+    description: "Servidor Gamma fornece suporte para hospedagem segura e rápida.",
     noticias: "Evento Online!",
     eventoDescription: `🚀 Venha jogar o nosso servidor easy/easy, estamos com 400 onlines nesse exato momento. 🚀
-
-🌟 Prêmiação Individual 🌟
-
-Fada Dourada (12horas)
-Divina (7dias)
-Baú Experiencia c/2
-Frango Assado c/2
-Esfera Klazedale (3dias)
-Traje Odin(30dias)
-
-🌟 Prêmiação Guild para 10 jogadores 🌟
-
-[10] Fadas Dourada (2 Dias)
-[10] Divinas (15dias)
-[10] Baús Experiencia c/5
-[10] Frangos Assado c/5
-[10] Andaluz N ou B 120/30
-[10] Sephirots
-[10] Imortalidade
-[10] Traje Odin(30dias)
-[5] Pergaminho Agua A c/120 (Lider)
-[1000] Cash (Lider)
-[5] Bis (Lider)
-
->> Receba-já: https://wa.link/xkhakt
-
-🌟 Versão do Servidor: 7.99 🌟
-⚡ Drop: Easy ⚡
-⚡ Up: Easy 🚀
-⚔️ Composição: Easy ⚔️`,
+    
+    🌟 Prêmiação Individual 🌟
+    
+    Fada Dourada (12horas)
+    Divina (7dias)
+    Baú Experiencia c/2
+    Frango Assado c/2
+    Esfera Klazedale (3dias)
+    Traje Odin(30dias)
+    
+    🌟 Prêmiação Guild para 10 jogadores 🌟
+    
+    [10] Fadas Dourada (2 Dias)
+    [10] Divinas (15dias)
+    [10] Baús Experiencia c/5
+    [10] Frangos Assado c/5
+    [10] Andaluz N ou B 120/30
+    [10] Sephirots
+    [10] Imortalidade
+    [10] Traje Odin(30dias)
+    [5] Pergaminho Agua A c/120 (Lider)
+    [1000] Cash (Lider)
+    [5] Bis (Lider)
+    
+    >> Receba-já: https://wa.link/xkhakt
+    
+    🌟 Versão do Servidor: 7.99 🌟
+    ⚡ Drop: Easy ⚡
+    ⚡ Up: Easy 🚀
+    ⚔️ Composição: Easy ⚔️`,
     whatsapp: "https://chat.whatsapp.com/JBFFsMtVIABGazyFERRRnM",
     site: "https://newwyd.com/",
     discord: "https://discord.gg/gkZysQ2nPe",

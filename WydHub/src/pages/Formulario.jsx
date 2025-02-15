@@ -57,10 +57,6 @@ const Formulario = () => {
     e.preventDefault();
 
     // Validações básicas
-    if (formData.whatsapp && !/^\d+$/.test(formData.whatsapp)) {
-      alert("O WhatsApp deve conter apenas números.");
-      return;
-    }
 
     if (formData.video && !formData.video.includes("youtube.com")) {
       alert("Insira uma URL válida do YouTube.");
@@ -96,7 +92,7 @@ const Formulario = () => {
     const mensagemCodificada = encodeURIComponent(mensagem);
 
     // URL do WhatsApp
-    const urlWhatsApp = `https://wa.me/553991244320?text=${mensagemCodificada}`;
+    const urlWhatsApp = `https://wa.me/5553991244320?text=${mensagemCodificada}`;
 
     // Abrindo o WhatsApp com a mensagem
     window.open(urlWhatsApp, "_blank");
@@ -112,7 +108,7 @@ const Formulario = () => {
             name="name" 
             value={formData.name} 
             onChange={handleChange} 
-            placeholder="Digite o nome" 
+            placeholder="Digite o nome do servidor" 
             maxLength={20}
           />
 
@@ -141,14 +137,6 @@ const Formulario = () => {
             placeholder="Digite a descrição" 
             maxLength={2000}
           />
-          <InputField 
-            label="Vídeo (YouTube URL)" 
-            name="video" 
-            value={formData.video} 
-            onChange={handleChange} 
-            placeholder="Cole o link do vídeo" 
-            maxLength={300}
-          />
 
           <InputField 
             label="Está em período de evento? Coloque as informações" 
@@ -165,6 +153,14 @@ const Formulario = () => {
             value={formData.whatsapp} 
             onChange={handleChange} 
             placeholder="Link de convite ou número" 
+            maxLength={300}
+          />
+          <InputField 
+            label="Vídeo (YouTube URL)" 
+            name="video" 
+            value={formData.video} 
+            onChange={handleChange} 
+            placeholder="Cole o link do vídeo" 
             maxLength={300}
           />
           <InputField 
@@ -225,7 +221,7 @@ const Formulario = () => {
           />
 
           <InputField 
-            label="Data de Lançamento (DD/MM/AAAA)" 
+            label="Data de Lançamento (DD/MM/AAAA) * Opcional" 
             name="dataLancamento" 
             value={formData.dataLancamento} 
             onChange={handleChange} 

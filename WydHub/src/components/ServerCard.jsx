@@ -22,7 +22,9 @@ const ServerCard = ({ server }) => {
       />
       <div className="server-info">
         <h3 className="server-name">{server.name}</h3>
-        <p className="server-description">{server.description}</p>
+        <p className="server-rate">{server.rate}</p>
+        <p className="server-date server-status">{server.status}{server.date}</p>
+        <p className="server-version">{server.version}</p>
       </div>
     </div>
   );
