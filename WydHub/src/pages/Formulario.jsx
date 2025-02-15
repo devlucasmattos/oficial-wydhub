@@ -45,7 +45,7 @@ const Formulario = () => {
     cupom: "",
     plano: "Básico",
     status: "Em desenvolvimento",
-    releaseDate: "", 
+    dataLancamento: "", 
   });
 
   const handleChange = (e) => {
@@ -56,18 +56,50 @@ const Formulario = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Validações básicas
+    if (formData.whatsapp && !/^\d+$/.test(formData.whatsapp)) {
+      alert("O WhatsApp deve conter apenas números.");
+      return;
+    }
+
     if (formData.video && !formData.video.includes("youtube.com")) {
       alert("Insira uma URL válida do YouTube.");
       return;
     }
 
-
-    if (formData.releaseDate && !/^\d{2}\/\d{2}\/\d{4}$/.test(formData.releaseDate)) {
-      alert("Formato de data inválido. Utilize DD/MM/AAAA.");
+    if (formData.dataLancamento && !/^\d{2}\/\d{2}\/\d{4}$/.test(formData.dataLancamento)) {
+      alert("A data de lançamento deve estar no formato DIA/MÊS/ANO.");
       return;
     }
 
-    console.log("Formulário enviado:", formData);
+    // Construindo a mensagem para o WhatsApp
+    const mensagem = `
+      *Cadastro de Conteúdo*:
+
+      *Nome:* ${formData.name}
+      *Dificuldade EXP:* ${formData.rateExp}
+      *Dificuldade Drop:* ${formData.rateDrop}
+      *Descrição:* ${formData.description}
+      *Vídeo (YouTube URL):* ${formData.video}
+      *Descrição do Evento:* ${formData.eventoDescription}
+      *WhatsApp:* ${formData.whatsapp}
+      *Site:* ${formData.site}
+      *Discord:* ${formData.discord}
+      *YouTube:* ${formData.youtube}
+      *Instagram:* ${formData.instagram}
+      *Cupom:* ${formData.cupom}
+      *Plano:* ${formData.plano}
+      *Data de Lançamento:* ${formData.dataLancamento}
+    `;
+
+    // Codificando a mensagem para URL
+    const mensagemCodificada = encodeURIComponent(mensagem);
+
+    // URL do WhatsApp
+    const urlWhatsApp = `https://wa.me/553991244320?text=${mensagemCodificada}`;
+
+    // Abrindo o WhatsApp com a mensagem
+    window.open(urlWhatsApp, "_blank");
   };
 
   return (
@@ -176,16 +208,6 @@ const Formulario = () => {
             maxLength={10}
           />
 
-          <InputField 
-            label="Data de Lançamento" 
-            name="releaseDate" 
-            type="text" 
-            value={formData.releaseDate} 
-            onChange={handleChange} 
-            placeholder="DD/MM/AAAA"
-            maxLength={10}
-          />
-
           <SelectField 
             label="Plano" 
             name="plano" 
@@ -200,6 +222,15 @@ const Formulario = () => {
             options={["Em desenvolvimento", "Fase de lançamento da versão Beta", "Beta Online", "Fase de lançamento", "Já lançado/Online"]} 
             value={formData.status} 
             onChange={handleChange} 
+          />
+
+          <InputField 
+            label="Data de Lançamento (DD/MM/AAAA)" 
+            name="dataLancamento" 
+            value={formData.dataLancamento} 
+            onChange={handleChange} 
+            placeholder="Digite a data de lançamento" 
+            maxLength={10}
           />
 
           <button type="submit" className="form-submit-btn w-full mt-4 p-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition">
