@@ -7,13 +7,13 @@ const ServerCard = ({ server }) => {
 
   const handleClick = () => {
     window.location.hash = `#/server/${server.id}`;
-    window.location.reload(); // Recarrega a página
+    window.location.reload(); 
   };
 
   return (
     <div
       className="server-card"
-      onClick={handleClick} // Agora chama o handleClick
+      onClick={handleClick} 
     >
       <img
         src={`${import.meta.env.BASE_URL}${server.image}`}

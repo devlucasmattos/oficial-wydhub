@@ -43,7 +43,6 @@ const ServerDetail = ({ servers }) => {
 
   return (
     <div className="server-detail">
-      {/* Alterado para navigate("/") */}
       <button className="back-button" onClick={() => navigate("/")}>
         ← Voltar para Home
       </button>

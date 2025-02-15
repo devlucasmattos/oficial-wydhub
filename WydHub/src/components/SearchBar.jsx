@@ -22,7 +22,7 @@ const SearchBar = ({ searchTerm, setSearchTerm, servers, setFilteredServers }) =
   );
 };
 
-// Definição das PropTypes
+
 SearchBar.propTypes = {
   searchTerm: PropTypes.string.isRequired,
   setSearchTerm: PropTypes.func.isRequired,

@@ -4,7 +4,7 @@ import ServerCard from "../components/ServerCard";
 import servers from "../Data";
 import Footer from "../components/Footer";
 import SearchBar from "../components/SearchBar";
-import "../pages/Home.css";
+import "./Home.css";
 
 const Home = () => {
   const navigate = useNavigate();

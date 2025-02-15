@@ -1,5 +1,5 @@
+import { useNavigate } from "react-router-dom";
 import "./NotFound.css";
-import { useParams, useNavigate } from "react-router-dom";
 
 const NotFound = () => {
   return (
