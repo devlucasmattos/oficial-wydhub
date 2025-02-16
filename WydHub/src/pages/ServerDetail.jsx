@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ServerDetail.css";
+import TabbedContent from "../components/TabbedContent";
 
 const ServerDetail = ({ servers }) => {
   const { id } = useParams();
@@ -59,7 +60,7 @@ const ServerDetail = ({ servers }) => {
       <div className="evento-description">
         {formatEventDescription(server.eventoDescription)}
       </div>
-
+      <TabbedContent />
       <div className="server-links">
         {renderButton(server.whatsapp, "WhatsApp")}
         {renderButton(server.site, "Site")}
