@@ -55,11 +55,7 @@ const ServerDetail = ({ servers }) => {
       />
       <h2 className="server-name">{server.name}</h2>
 
-      <p className="notices">{formatNotices(server.noticias)}</p>
-
-      <div className="evento-description">
-        {formatEventDescription(server.eventoDescription)}
-      </div>
+    
       <TabbedContent />
       <div className="server-links">
         {renderButton(server.whatsapp, "WhatsApp")}
