@@ -63,6 +63,7 @@ const ServerDetail = ({ servers }) => {
       <h2 className="server-name">{server.name}</h2>
 
       <TabbedContent />
+      <h2 className="social-h2">Redes sociais:</h2>
       <div className="server-links">
         {renderButton(server.whatsapp, "WhatsApp")}
         {renderButton(server.site, "Site")}

@@ -6,7 +6,7 @@ const servers = [
     date: "05/01/25",
     version: "Versão: 7.99",
     status: "Online desde: ",
-    image: "./images/wyd1.png",
+    image: "./images/1/wyd1.png",
     description: `🔥 Bem-vindo ao WYD Mythik!
 🔥 O servidor privado que veio para revolucionar sua experiência em WYD!
 🏹⚔️📅 Online desde: 05/01/2024
@@ -57,7 +57,7 @@ Aproveite o kit migração para iniciar sua jornada no melhor momento do Mythik!
     date: "15/02/25",
     version: "Versão: 7.54",
     status: "Online desde: ",
-    image: "./images/wyd2.png",
+    image: "./images/2/wyd2.png",
     description: "Servidor Beta é otimizado para rodar aplicações empresariais de grande porte.",
     noticias: "Notícias: 🚀 Inauguração WYD Ryzen 754 Original 🚀",
     eventoDescription: `🚀 Inauguração WYD Ryzen 754 Original 🚀
@@ -86,7 +86,74 @@ Acesse e participe dessa aventura épica! 🔥`,
     rate: "Easy/Easy",
     date: "23/01/24",
     status: "Online desde ",
-    image: "./images/wyd3.png",
+    image: "./images/3/wyd3.png",
+    description: `🌟 Versão do Servidor: 7.99 🌟
+⚡ Drop: Easy ⚡
+⚡ Up: Easy 🚀`,
+    noticias: "Evento Online!",
+    eventoDescription: `🚀 Venha jogar o nosso servidor easy/easy, estamos com 400 onlines nesse exato momento. 🚀
+
+🌟 Prêmiação Individual 🌟
+
+- Fada Dourada (12 horas)
+- Divina (7 dias)
+- Baú Experiência c/2
+- Frango Assado c/2
+- Esfera Klazedale (3 dias)
+- Traje Odin (30 dias)
+
+🌟 Prêmiação Guild para 10 jogadores 🌟
+
+- [10] Fadas Douradas (2 Dias)
+- [10] Divinas (15 dias)
+- [10] Baús Experiência c/5
+- [10] Frangos Assado c/5
+- [10] Andaluz N ou B 120/30
+- [10] Sephirots
+- [10] Imortalidade
+- [10] Traje Odin (30 dias)
+- [5] Pergaminho Água A c/120 (Líder)
+- [1000] Cash (Líder)
+- [5] Bis (Líder)
+
+>> Receba-já: https://wa.link/xkhakt
+
+🌟 Versão do Servidor: 7.99 🌟
+⚡ Drop: Easy ⚡
+⚡ Up: Easy 🚀
+⚔️ Composição: Easy ⚔️`,
+    whatsapp: "https://chat.whatsapp.com/JBFFsMtVIABGazyFERRRnM",
+    site: "https://newwyd.com/",
+    discord: "https://discord.gg/gkZysQ2nPe",
+    youtube: "",
+    instagram: "https://www.instagram.com/newwydoficial/",
+    highlight: true,
+  },
+  {
+    id: 4, // Será gerado automaticamente
+    name: "testename", // Nome do servidor
+    rate: "Easy/Easy", // Dificuldade Drop
+    description: "Teste descrição", // Descrição
+    video: "https://www.youtube.com/watch?v=_QGM9bD87xA", // URL do vídeo (YouTube)
+    eventoDescription: "aaaa", // Descrição do evento
+    whatsapp: "", // Link do WhatsApp
+    site: "", // URL do site
+    discord: "", // Link do Discord
+    youtube: "https://www.youtube.com/@FiascoOL", // Canal do YouTube
+    instagram: "https://www.instagram.com/mythikgame/", // Perfil do Instagram
+    cupom: "ROOH10", // Cupom promocional
+    plano: "Básico", // Plano selecionado
+    status: "Em desenvolvimento", // Status
+    dataLancamento: "Sem data prevista", // Data de lançamento (DD/MM/AAAA)
+    highlight: false
+  },
+  {
+    id: 5,
+    name: "New Wyd 5",
+    rate: "Easy/Easy",
+    date: "23/01/24",
+    status: "Online desde ",
+    image: "./images/3/wyd3.png",
     description: "Servidor Gamma fornece suporte para hospedagem segura e rápida.",
     noticias: "Evento Online!",
     eventoDescription: `🚀 Venha jogar o nosso servidor easy/easy, estamos com 400 onlines nesse exato momento. 🚀
@@ -125,8 +192,9 @@ Acesse e participe dessa aventura épica! 🔥`,
     discord: "https://discord.gg/gkZysQ2nPe",
     youtube: "",
     instagram: "https://www.instagram.com/newwydoficial/",
-    highlight: true
-  }
+    highlight: false,
+  },
+
 ];
 
 export default servers;

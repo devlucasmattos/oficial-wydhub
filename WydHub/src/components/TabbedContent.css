@@ -6,20 +6,22 @@
     padding: 30px;
     background-color: #121212;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: 800px;
     max-width: 100%;
     margin: 0 0 50px 0;
   }
   
   .tabs {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Espaça igualmente os botões */
     gap: 12px;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que os botões se movam para uma nova linha se necessário */
   }
   
   .tab {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 25px;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #ffffff;
     text-decoration: none;
@@ -29,6 +31,10 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-family: 'Rajdhani', sans-serif;
+    flex: 1 1 auto; /* Permite que o botão encolha quando necessário */
+    min-width: 120px; /* Define a largura mínima para os botões */
+    text-align: center;
+    white-space: nowrap; /* Impede que o texto quebre */
   }
   
   .tab:hover {
@@ -43,6 +49,7 @@
   }
   
   .tab-content {
+    width: 750px;
     font-size: 1.2rem;
     color: #c0c0c0;
     line-height: 1.6;
@@ -57,29 +64,61 @@
   
   .tab-content img {
     max-width: 100%;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     margin-top: 20px;
   }
   
+  .video-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+  
+  /* Estilos para telas menores */
   @media (max-width: 768px) {
     .tabbed-content {
       padding: 20px;
     }
   
     .tabs {
-      flex-direction: column;
-      gap: 8px;
+      justify-content: space-evenly; /* Alinha os botões de forma equilibrada */
+      flex-wrap: nowrap; /* Impede que os botões se movam para a próxima linha */
+      padding: 0 10px 0 10px;
+      max-width: 100%;
     }
   
     .tab {
-      width: 100%;
+      width: auto; /* Garante que os botões encolham ao máximo sem ocupar toda a largura */
+      min-width: 90px; /* Tamanho mínimo do botão */
       text-align: center;
+      white-space: nowrap; /* Impede que o texto quebre em resoluções menores */
+      font-size: 0.75rem;
     }
   
     .tab-content {
       font-size: 1rem;
       max-width: 100%;
+    }
+  
+    .video-container {
+      padding-bottom: 56.25%; /* Aspect ratio 16:9 */
     }
   }
   

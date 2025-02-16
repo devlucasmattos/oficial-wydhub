@@ -1,3 +1,9 @@
+html, body {
+  height: 100%;
+  margin: 0 0 50px 0;
+  background-color: #121212;
+}
+
 .server-detail {
   display: flex;
   flex-direction: column;
@@ -5,7 +11,6 @@
   text-align: center;
   padding: 30px;
   background-color: #121212;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   max-width: 100%;
   margin: 0 0 50px 0;
 }
@@ -38,34 +43,52 @@
   max-width: 85%;
 }
 
+.social-h2 {
+  color: #ffffff;
+}
+
 .server-links {
   margin-top: 20px;
+  margin-bottom: 40px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
+  flex-wrap: nowrap; /* Impede que os itens se movam para a próxima linha */
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  gap: 8px; /* Espaçamento entre os itens */
+  max-width: 100%;
+  overflow-x: auto; /* Permite rolagem horizontal caso os itens ultrapassem a largura disponível */
 }
 
 .button {
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
   color: #ffffff;
   text-decoration: none;
+  border: 1px solid #ffffff;
   border-radius: 8px;
-  background: linear-gradient(45deg, #ff0000b0, #004d7a);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+  min-width: 90px; /* Tamanho mínimo do botão */
+  white-space: nowrap; /* Impede que o texto quebre */
 }
 
 .button:hover {
+  background-color: #424242;
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
 }
 
+.button.active {
+  background-color: #22313a; /* Cor de fundo para o botão ativo */
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
 .back-button {
-  
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -80,7 +103,6 @@
 .back-button:hover {
   background: #424242;
 }
-
 
 @media (max-width: 768px) {
   .server-detail {
@@ -99,12 +121,14 @@
   }
 
   .server-links {
-    flex-direction: column;
-    gap: 8px;
+    justify-content: flex-start; /* Mantém os itens alinhados à esquerda em telas menores */
+    padding: 10px;
   }
 
   .button {
-    width: 100%;
+    width: auto; /* Permite que os botões encolham conforme necessário */
     text-align: center;
+    font-size: 11px;
+    padding: 15px 8px 15px 8px;
   }
 }
