@@ -10,17 +10,14 @@ const TabbedContent = () => {
   // Encontra o servidor com o id correspondente
   const server = servers.find((server) => server.id === parseInt(id));
 
-  if (!server) {
-    return <h2>Servidor não encontrado!</h2>;
-  }
 
   const renderTabContent = () => {
     switch (activeTab) {
       case 'comeceAqui':
         return (
           <div className="tab-content">
-            <h2>Comece aqui</h2>
-            <p>Bem-vindo ao servidor {server.name}! Escolha uma das opções acima para começar sua jornada.</p>
+            <h2>Conheça {server.name}!</h2>
+            <h3 dangerouslySetInnerHTML={{ __html: server.description.replace(/\n/g, '<br>') }} />
           </div>
         );
       case 'noticias':
@@ -28,7 +25,7 @@ const TabbedContent = () => {
           <div className="tab-content">
             <h2>Notícias</h2>
             <p>{server.noticias}</p>
-            <p>{server.eventoDescription}</p>
+            <p dangerouslySetInnerHTML={{ __html: server.eventoDescription.replace(/\n/g, '<br>') }} />
           </div>
         );
       case 'imagensVideos':
@@ -42,6 +39,7 @@ const TabbedContent = () => {
         return <div className="tab-content">Selecione uma aba.</div>;
     }
   };
+  
 
   return (
     <div className="tabbed-content">

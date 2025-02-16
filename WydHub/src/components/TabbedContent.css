@@ -23,7 +23,7 @@
     font-weight: bold;
     color: #ffffff;
     text-decoration: none;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 8px;
     background-color: transparent;
     cursor: pointer;
@@ -37,7 +37,7 @@
   }
   
   .tab.active {
-    background-color: #004d7a;
+    background-color: #22313a;
     color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
   }

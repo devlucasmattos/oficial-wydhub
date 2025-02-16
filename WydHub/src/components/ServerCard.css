@@ -1,11 +1,11 @@
 .server-card {
-  background: #181818;
+  background: #2C2C2C;
   border-radius: 10px;
   padding: 16px;
   text-align: center;
   width: 250px;
   height: 320px;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,12 @@
   max-height: 150px;
   border-radius: 10px;
   object-fit: cover;
-  flex-grow: 1; 
+  flex-grow: 1;
+  transition: opacity 0.3s ease; /* Suavizando transição de opacidade */
+}
+
+.server-card:hover .server-image {
+  opacity: 0.9; /* Opacidade suave ao passar o mouse */
 }
 
 .server-info {
@@ -43,10 +48,13 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%; /* Ocupa toda a largura */
   min-height: 130px; /* Garante um tamanho mínimo para manter espaço */
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Transição para o fundo e sombra */
 }
 
-
-
+.server-card:hover .server-info {
+  background: rgba(255, 255, 255, 0.15); /* Suavizando o fundo na transição */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombras mais fortes ao passar o mouse */
+}
 
 .server-info .server-name {
   color: #cccccc;

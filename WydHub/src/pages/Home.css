@@ -1,10 +1,17 @@
+
 .container {
+  position: relative;
   text-align: center;
   padding: 40px 20px;
-  background-color: #121212;
+  background-color: #1E1E1E;
   min-height: 100vh;
   margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
+
 
 .container h1 {
   font-size: 2.5rem;
@@ -17,6 +24,21 @@
   color: #ffffff;
   margin-bottom: 20px;
 }
+
+.not-found-server {
+  font-size: 1.2rem;
+  color: #f44336; /* Cor vermelha para destacar o erro */
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #494949; /* Cor de fundo suave para o alerta */
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
 
 .plans-button {
   background-color: #ffffff;
@@ -42,7 +64,6 @@
   flex-wrap: wrap;
   gap: 20px;
 }
-
 
 @media (max-width: 768px) {
   .server-list {

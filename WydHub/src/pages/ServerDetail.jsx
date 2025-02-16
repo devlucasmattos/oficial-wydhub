@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import "./ServerDetail.css";
 import TabbedContent from "../components/TabbedContent";
 
@@ -9,8 +10,14 @@ const ServerDetail = ({ servers }) => {
 
   const server = servers.find((s) => s.id === parseInt(id));
 
+  useEffect(() => {
+    if (!server) {
+      navigate("*"); // Redireciona para a página NotFound
+    }
+  }, [server, navigate]);
+
   if (!server) {
-    return <h2>Servidor não encontrado!</h2>;
+    return null; // Evita renderizar algo antes do redirecionamento
   }
 
   const formatEventDescription = (description = "") => {
@@ -55,7 +62,6 @@ const ServerDetail = ({ servers }) => {
       />
       <h2 className="server-name">{server.name}</h2>
 
-    
       <TabbedContent />
       <div className="server-links">
         {renderButton(server.whatsapp, "WhatsApp")}
