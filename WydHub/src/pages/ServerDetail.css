@@ -32,14 +32,13 @@ html, body {
   font-family: 'DM Sans', sans-serif;
 }
 
-
 .social-h2 {
   margin-bottom: 5px;
   color: #f0f0f0;
 }
 
 .server-links {
-  margin: 15px 0 45px 0; /* Espaçamento superior e inferior de 55px */
+  margin: 15px 0 45px 0;
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -102,11 +101,12 @@ html, body {
   padding: 10px 15px;
   cursor: pointer;
   margin-bottom: 20px;
-  transition: background 0.3s ease;
+  background: #181818;
+  transition: background 0.3s ease-in-out;
 }
 
 .back-button:hover {
-  background: #424242;
+  background: #2C2C2C;
 }
 
 @media (max-width: 768px) {

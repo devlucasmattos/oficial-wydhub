@@ -144,7 +144,12 @@
     padding: 10px 15px;
     cursor: pointer;
     margin-bottom: 20px;
-    transition: background 0.3s ease;
+    background: #181818;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .back-button:hover {
+    background: #2C2C2C;
   }
 
   @media (max-width: 768px) {
