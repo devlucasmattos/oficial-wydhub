@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import "./ServerDetail.css";
 import TabbedContent from "../components/TabbedContent";
+import { FaWhatsapp, FaGlobe, FaDiscord, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const ServerDetail = ({ servers }) => {
   const { id } = useParams();
@@ -20,29 +21,17 @@ const ServerDetail = ({ servers }) => {
     return null; // Evita renderizar algo antes do redirecionamento
   }
 
-  const formatEventDescription = (description = "") => {
-    return description.split("\n").map((line, index) => (
-      <span key={index}>
-        {line}
-        <br />
-      </span>
-    ));
-  };
-
-  const formatNotices = (notices = "") => {
-    return notices.split("\n").map((line, index) => (
-      <span key={index}>
-        {line}
-        <br />
-      </span>
-    ));
-  };
-
-  const renderButton = (url, label) => {
+  const renderIconButton = (url, IconComponent, label, className) => {
     if (url) {
       return (
-        <a href={url} target="_blank" rel="noopener noreferrer" className="button">
-          {label}
+        <a 
+          href={url} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={`icon-button ${className}`} 
+          aria-label={label}
+        >
+          <IconComponent size={28} />
         </a>
       );
     }
@@ -63,14 +52,16 @@ const ServerDetail = ({ servers }) => {
       <h2 className="server-name">{server.name}</h2>
 
       <TabbedContent />
+      <div className="social-content">
       <h2 className="social-h2">Redes sociais:</h2>
       <div className="server-links">
-        {renderButton(server.whatsapp, "WhatsApp")}
-        {renderButton(server.site, "Site")}
-        {renderButton(server.discord, "Discord")}
-        {renderButton(server.youtube, "YouTube")}
-        {renderButton(server.instagram, "Instagram")}
+        {renderIconButton(server.whatsapp, FaWhatsapp, "WhatsApp", "whatsapp")}
+        {renderIconButton(server.site, FaGlobe, "Site", "website")}
+        {renderIconButton(server.discord, FaDiscord, "Discord", "discord")}
+        {renderIconButton(server.youtube, FaYoutube, "YouTube", "youtube")}
+        {renderIconButton(server.instagram, FaInstagram, "Instagram", "instagram")}
       </div>
+    </div>
     </div>
   );
 };
@@ -88,6 +79,7 @@ ServerDetail.propTypes = {
       site: PropTypes.string,
       discord: PropTypes.string,
       youtube: PropTypes.string,
+      instagram: PropTypes.string,
     })
   ).isRequired,
 };

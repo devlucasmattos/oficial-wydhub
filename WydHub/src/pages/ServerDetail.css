@@ -1,7 +1,7 @@
 html, body {
   height: 100%;
   margin: 0 0 50px 0;
-  background-color: #121212;
+  background-color: #1E1E1E;
 }
 
 .server-detail {
@@ -10,7 +10,7 @@ html, body {
   align-items: center;
   text-align: center;
   padding: 30px;
-  background-color: #121212;
+  background-color: #1E1E1E;
   max-width: 100%;
   margin: 0 0 50px 0;
 }
@@ -32,60 +32,65 @@ html, body {
   font-family: 'DM Sans', sans-serif;
 }
 
-.server-description,
-.evento-description,
-.notices {
-  font-size: 1.2rem;
-  color: #c0c0c0;
-  margin: 10px 0;
-  line-height: 1.6;
-  font-family: 'DM Sans', sans-serif;
-  max-width: 85%;
-}
 
 .social-h2 {
-  color: #ffffff;
+  margin-bottom: 5px;
+  color: #f0f0f0;
 }
 
 .server-links {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin: 15px 0 45px 0; /* Espaçamento superior e inferior de 55px */
   display: flex;
-  flex-wrap: nowrap; /* Impede que os itens se movam para a próxima linha */
-  justify-content: flex-start; /* Alinha os itens à esquerda */
-  gap: 8px; /* Espaçamento entre os itens */
-  max-width: 100%;
-  overflow-x: auto; /* Permite rolagem horizontal caso os itens ultrapassem a largura disponível */
+  justify-content: center;
+  gap: 12px;
 }
 
-.button {
-  display: inline-block;
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  font-weight: bold;
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #242424;
   color: #ffffff;
   text-decoration: none;
-  border: 1px solid #ffffff;
-  border-radius: 8px;
-  background-color: transparent;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Rajdhani', sans-serif;
-  text-align: center;
-  min-width: 90px; /* Tamanho mínimo do botão */
-  white-space: nowrap; /* Impede que o texto quebre */
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
 }
 
-.button:hover {
-  background-color: #424242;
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+/* Efeito ao passar o mouse */
+.icon-button:hover {
+  transform: scale(1.1);
 }
 
-.button.active {
-  background-color: #22313a; /* Cor de fundo para o botão ativo */
-  color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+/* WhatsApp - Verde */
+.icon-button.whatsapp:hover {
+  background-color: #25D366;
+  color: white;
+}
+
+/* Discord - Azul */
+.icon-button.discord:hover {
+  background-color: #5865F2;
+  color: white;
+}
+
+/* YouTube - Vermelho */
+.icon-button.youtube:hover {
+  background-color: #FF0000;
+  color: white;
+}
+
+/* Instagram - Degradê (padrão roxo) */
+.icon-button.instagram:hover {
+  background-color: #C13584;
+  color: white;
+}
+
+/* Site - Azul Claro */
+.icon-button.website:hover {
+  background-color: #1E90FF;
+  color: white;
 }
 
 .back-button {
@@ -105,30 +110,13 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .server-detail {
-    padding: 20px;
-  }
-
-  .server-name {
-    font-size: 1.8rem;
-  }
-
-  .server-description,
-  .evento-description,
-  .notices {
-    font-size: 1rem;
-    max-width: 100%;
-  }
-
   .server-links {
-    justify-content: flex-start; /* Mantém os itens alinhados à esquerda em telas menores */
-    padding: 10px;
+    gap: 8px;
+    margin: 15px 0 45px 0;
   }
 
-  .button {
-    width: auto; /* Permite que os botões encolham conforme necessário */
-    text-align: center;
-    font-size: 11px;
-    padding: 15px 8px 15px 8px;
+  .icon-button {
+    width: 40px;
+    height: 40px;
   }
 }

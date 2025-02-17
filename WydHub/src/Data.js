@@ -122,6 +122,7 @@ Acesse e participe dessa aventura épica! 🔥`,
 ⚡ Drop: Easy ⚡
 ⚡ Up: Easy 🚀
 ⚔️ Composição: Easy ⚔️`,
+    video: "https://www.youtube.com/watch?v=uumeFPluAyQ",
     whatsapp: "https://chat.whatsapp.com/JBFFsMtVIABGazyFERRRnM",
     site: "https://newwyd.com/",
     discord: "https://discord.gg/gkZysQ2nPe",

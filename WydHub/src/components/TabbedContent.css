@@ -4,7 +4,7 @@
     align-items: center;
     text-align: center;
     padding: 30px;
-    background-color: #121212;
+    background-color: #1E1E1E;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     width: 800px;
     max-width: 100%;
@@ -20,7 +20,7 @@
   }
   
   .tab {
-    padding: 12px 25px;
+    padding: 12px 0;
     font-size: 1.1rem;
     font-weight: bold;
     color: #ffffff;
@@ -56,7 +56,7 @@
     margin: 10px 0;
     font-family: 'DM Sans', sans-serif;
     max-width: 85%;
-    background-color: #1e1e1e;
+    background-color: #2C2C2C;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -94,7 +94,7 @@
   /* Estilos para telas menores */
   @media (max-width: 768px) {
     .tabbed-content {
-      padding: 20px;
+      padding: 5px;
     }
   
     .tabs {

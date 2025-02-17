@@ -90,7 +90,7 @@ const TabbedContent = () => {
           Notícias
         </button>
         <button className={`tab ${activeTab === 'imagensVideos' ? 'active' : ''}`} onClick={() => setActiveTab('imagensVideos')}>
-          Imagens/Vídeos
+          Mídia
         </button>
       </div>
       {renderTabContent()}
