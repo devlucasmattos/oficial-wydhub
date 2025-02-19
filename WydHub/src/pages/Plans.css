@@ -1,82 +1,76 @@
 .plans-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #1E1E1E;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    min-height: 100vh;
-    max-width: 100%;
-  }
-  
-  .plans-container h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #f0f0f0;
-    margin-bottom: 15px;
-    font-family: 'DM Sans', sans-serif;
-  }
-  
-  .plans-container p {
-    font-size: 1.2rem;
-    color: #c0c0c0;
-    margin-bottom: 30px;
-    max-width: 85%;
-    line-height: 1.6;
-    font-family: 'DM Sans', sans-serif;
-  }
-  
-  .plans-list {
-    display: flex;
-    gap: 20px;
-    max-width: 90%;
-  }
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.plans-container h1 {
+  font-size: 2rem;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.plans-container h1.plans-title {
+  font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+  color: #eeeeee; /* Cor mais suave e elegante */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-bottom: 15px; /* Ajusta o espaço abaixo do título */
+}
+
+.plans-container p.plans-p {
+  font-size: 1.2rem; /* Tamanho de fonte para o parágrafo */
+  color: #ddd; /* Cor cinza suave */
+  line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+  margin-bottom: 20px; /* Ajusta o espaço abaixo do parágrafo */
+}
 
 
-  
-  .back-button {
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    background: #181818;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .back-button:hover {
-    background: #2C2C2C;
-  }
-  
-  .plans-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
-  }
+.plans-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
 
-  
-  @media (max-width: 768px) {
-    .plans-list {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .plans-container h1 {
-      font-size: 2rem;
-    }
-  
-    .plans-container p {
-      font-size: 1rem;
-      max-width: 100%;
-    }
-  
-    .plans-button {
-      width: 100%;
-      text-align: center;
-    }
-  }
-  
+.back-button {
+  margin-top: 20px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #555;
+}
+
+.plan-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.plan-options button {
+  background: #ddd;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.plan-options button.active {
+  background: #181818;
+  color: white;
+  font-weight: bold;
+}
+
+.plan-options button:hover {
+  background: #2c2c2c;
+  color: white;
+}

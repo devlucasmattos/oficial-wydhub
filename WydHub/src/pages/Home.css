@@ -15,13 +15,13 @@
 
 .container h1 {
   font-size: 2.5rem;
-  color: #ffffff;
+  color: #ddd;
   margin-bottom: 10px;
 }
 
 .container h2 {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #ddd;
   margin-bottom: 20px;
 }
 
@@ -41,7 +41,7 @@
 
 
 .plans-button {
-  background-color: #ffffff;
+  background-color: #ddd;
   color: rgb(31, 31, 31);
   font-size: 1.2rem;
   font-weight: 700;
@@ -54,7 +54,7 @@
 }
 
 .plans-button:hover {
-  background-color: #cfcfcf;
+  background-color: #c4c4c4;
   transform: scale(1.05);
 }
 

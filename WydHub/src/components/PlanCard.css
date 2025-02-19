@@ -1,61 +1,97 @@
 .plan-card {
-  background-color: #2C2C2C;
-  padding: 25px;
-  border-radius: 15px;
+  background: #2C2C2C;
+  border-radius: 10px;
+  padding: 25px 5px;
   text-align: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  width: 320px;
+  height: 420px;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  overflow: hidden;
 }
 
 .plan-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  transform: scale(1.02);
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
   background-color: #181818;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(2, 2, 2, 0.4);
+  border: solid 1px white;
 }
 
-.plan-price {
-  margin-top: 10px;
-  font-size: 22px;
+.plan-header {
+  margin-bottom: 10px;
+}
+
+.plan-card h2 {
+  font-size: 1.6rem;
+  color: #cccccc;
   font-weight: bold;
+  margin-top: 0;
+}
+
+.plan-pricing {
+  margin-bottom: 15px;
+}
+
+.plan-monthly {
+  font-size: 1.6rem;
+  color: #28a745;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.plan-total {
+  font-size: 0.95rem;  /* Reduzi um pouco o tamanho */
+  color: white;  /* Garantindo que fique branco */
+  font-weight: bold;
+  margin-top: 5px;  /* Ajuste para melhorar espaçamento */
+}
+
+.plan-installments {
+  margin-bottom: 10px;
+}
+
+.plan-installment {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+.plan-features {
+  margin-bottom: 20px;
 }
 
 .plan-card ul {
   list-style: none;
   padding: 0;
-  margin: -10px 5px 55px 5px;
+  margin: 10px 0;
 }
 
 .plan-card li {
-  font-size: 16px;
-  color: #d4d4d4;
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 5px 0;
+}
+
+.plan-footer {
+  margin-top: 10px;
 }
 
 .subscribe-button {
-  background-color: #ffffff;
-  color: rgb(17, 17, 17);
+  background: linear-gradient(135deg, #ff6600, #ff4500);
+  color: white;
   border: none;
-  padding: 12px 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  width: 80%;
-  transition: background-color 0.5s ease, transform 0.5s ease;
-  position: absolute; 
-  bottom: 16px; 
+  transition: background 0.3s ease-in-out;
 }
 
 .subscribe-button:hover {
-  background-color: #218838;
-  transform: scale(1.05);
-}
-
-.subscribe-button:active {
-  transform: scale(0.98);
+  background: linear-gradient(135deg, #ff4500, #ff2200);
 }
