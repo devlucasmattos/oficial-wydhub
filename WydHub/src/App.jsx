@@ -7,6 +7,7 @@ import servers from "./Data";
 import Footer from "./components/Footer";
 import Formulario from "./pages/Formulario";
 import TabbedContent from "./components/TabbedContent";
+import TermosCondicoes from "./pages/TermosCondicoes"
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/server/:id" element={<ServerDetail servers={servers} />} />
         <Route path="/plans" element={<Plans />} />
         <Route path="/formulario" element={<Formulario />} />
+        <Route path="/termoscondicoes" element={<TermosCondicoes />} />
         <Route path="*" element={<NotFound />} />
         
       </Routes>

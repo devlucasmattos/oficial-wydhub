@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Formulario.css";
-
-
+import TermosCondicoesLink from "../components/TermosCondicoesLink";
 
 const InputField = ({ label, type = "text", value, onChange, placeholder, name, maxLength, onBlur, errorMessage }) => (
   <div className="form-input mb-4">
@@ -52,10 +52,10 @@ const Formulario = () => {
     plano: "Básico",
     status: "Em desenvolvimento",
     dataLancamento: "",
+    termsAccepted: false, // Para o checkbox de termos
   });
 
   const navigate = useNavigate();
-
   const [errorMessages, setErrorMessages] = useState({});
 
   const handleChange = (e) => {
@@ -63,10 +63,10 @@ const Formulario = () => {
     setFormData({ ...formData, [name]: value });
     setErrorMessages({ ...errorMessages, [name]: "" }); // Limpar erro ao mudar valor
   };
-  
+
   const handleBlur = (e) => {
     const { name, value } = e.target;
-  
+
     // Validação para quando o usuário clicar fora
     if (name === "video" && value && !value.includes("youtube.com")) {
       setErrorMessages((prev) => ({
@@ -74,7 +74,7 @@ const Formulario = () => {
         video: "Insira uma URL válida do YouTube.",
       }));
     }
-  
+
     if (name === "dataLancamento" && value && !/^\d{2}\/\d{2}\/\d{4}$/.test(value)) {
       setErrorMessages((prev) => ({
         ...prev,
@@ -82,20 +82,25 @@ const Formulario = () => {
       }));
     }
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     // Validações básicas (sem duplicação com o handleBlur)
     let hasError = false;
     const newErrorMessages = {};
-  
+
     // Verificando se o nome está vazio
     if (!formData.name.trim()) {
       newErrorMessages.name = "O campo nome é obrigatório.";
       hasError = true;
     }
-  
+
+    if (!formData.termsAccepted) {
+      newErrorMessages.termsAccepted = "Você deve aceitar os termos e condições.";
+      hasError = true;
+    }
+
     if (hasError) {
       setErrorMessages(newErrorMessages);
       return; // Impede o envio se houver erro
@@ -130,8 +135,6 @@ const Formulario = () => {
     // Abrindo o WhatsApp com a mensagem
     window.open(urlWhatsApp, "_blank");
   };
-
-  
 
   return (
     <div className="main-container">
@@ -300,11 +303,31 @@ const Formulario = () => {
             errorMessage={errorMessages.dataLancamento}
           />
 
+<div className="form-checkbox mb-4">
+  <label className="form-label flex items-center">
+    <input
+      type="checkbox"
+      name="termsAccepted"
+      checked={formData.termsAccepted}
+      onChange={(e) => handleChange(e)}
+      className="form-checkbox-input"
+    />
+    <span className="ml-2">
+      Eu li e concordo com os <TermosCondicoesLink />
+    </span>
+  </label>
+  {errorMessages.termsAccepted && (
+    <div className="error-message text-red-500 text-sm">
+      {errorMessages.termsAccepted}
+    </div>
+  )}
+</div>
+
+
           <button type="submit" className="form-submit-btn w-full mt-4 p-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition">
             Enviar
           </button>
         </form>
-        
       </div>
       <button className="back-button" onClick={() => navigate("/")}>
         ← Voltar para Home
