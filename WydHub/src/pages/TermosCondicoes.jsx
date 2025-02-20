@@ -21,10 +21,7 @@ const TermosCondicoes = () => {
         <div className="termos-section">
           <h2 className="sub-title">2. Propriedade Intelectual</h2>
           <p>
-            Todo o conteúdo disponível em nosso site, incluindo textos, imagens, logotipos, vídeos e outros materiais, é de nossa propriedade e protegido por direitos autorais.
-          </p>
-          <p>
-            O uso, reprodução ou distribuição desse conteúdo sem autorização prévia é estritamente proibido.
+            Todo o conteúdo disponível em nosso site, incluindo textos, imagens, logotipos, vídeos e outros materiais, é desenvolvido pelos usuários que cadastram os servidores em WydHub.
           </p>
         </div>
 
@@ -39,7 +36,17 @@ const TermosCondicoes = () => {
         </div>
 
         <div className="termos-section">
-          <h2 className="sub-title">4. Alterações nos Termos</h2>
+          <h2 className="sub-title">4. Política de Reembolso</h2>
+          <p>
+            Oferecemos planos mensais, trimestrais, semestrais e anuais. Caso não esteja satisfeito com nossos serviços, você pode solicitar um reembolso dentro de 7 dias após a compra, desde que o serviço não tenha sido utilizado.
+          </p>
+          <p>
+            Para solicitar um reembolso, entre em contato conosco através do nosso WhatsApp. O reembolso será processado em até 10 dias úteis após a aprovação da solicitação.
+          </p>
+        </div>
+
+        <div className="termos-section">
+          <h2 className="sub-title">5. Alterações nos Termos</h2>
           <p>
             Reservamo-nos o direito de modificar estes Termos e Condições a qualquer momento, sem aviso prévio. 
           </p>
@@ -49,7 +56,7 @@ const TermosCondicoes = () => {
         </div>
 
         <div className="termos-section">
-          <h2 className="sub-title">5. Lei Aplicável</h2>
+          <h2 className="sub-title">6. Lei Aplicável</h2>
           <p>
             Estes Termos e Condições são regidos e interpretados de acordo com as leis do Brasil. 
           </p>
@@ -59,10 +66,12 @@ const TermosCondicoes = () => {
         </div>
 
         <div className="termos-section">
-          <h2 className="sub-title">6. Contato</h2>
+          <h2 className="sub-title">7. Contato</h2>
           <p>
-            Caso tenha dúvidas ou precise de mais informações, entre em contato conosco pelo e-mail:
-            <strong> contato@exemplo.com</strong>.
+            Caso tenha dúvidas ou precise de mais informações, entre em contato conosco pelo 
+            <a href="https://wa.me/5553991244320" target="_blank" rel="noopener noreferrer">
+              <strong> WhatsApp</strong>
+            </a>.
           </p>
         </div>
 

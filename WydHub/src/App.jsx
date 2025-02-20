@@ -6,7 +6,6 @@ import NotFound from "./pages/NotFound";
 import servers from "./Data";
 import Footer from "./components/Footer";
 import Formulario from "./pages/Formulario";
-import TabbedContent from "./components/TabbedContent";
 import TermosCondicoes from "./pages/TermosCondicoes"
 
 const App = () => {
