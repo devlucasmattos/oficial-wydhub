@@ -1,0 +1,11 @@
+.term-link {
+    color: #3b82f6; 
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .term-link:hover {
+    color: #1d4ed8; 
+    text-decoration: underline;
+  }
+  

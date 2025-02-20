@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import './TermosCondicoesLink.css';  
 
 const TermosCondicoesLink = () => {
   const navigate = useNavigate();
@@ -8,7 +9,10 @@ const TermosCondicoesLink = () => {
   };
 
   return (
-    <span className="text-blue-500 underline cursor-pointer" onClick={handleNavigate}>
+    <span
+      className="term-link"
+      onClick={handleNavigate}
+    >
       termos e condições
     </span>
   );
