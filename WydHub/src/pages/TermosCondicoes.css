@@ -1,46 +1,60 @@
 .termos-container {
-    padding: 20px;
-    max-width: 800px;
+    padding: 30px;
+    max-width: 900px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  .termos-title {
-    font-size: 2rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.termos-title {
+    font-size: 2.2rem;
     text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .termos-content {
-    padding: 20px;
-    background-color: #f9f9f9;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.termos-content {
+    padding: 25px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.termos-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #333;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sub-title {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    color: #333;
-  }
-  
-  .termos-button-container {
+}
+
+.sub-title {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    color: #ffffff;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 5px;
+}
+
+.termos-button-container {
     margin-top: 40px;
     text-align: center;
-  }
-  
-  .termos-button {
-    padding: 10px 20px;
-    background-color: #007bff;
+}
+
+.termos-button {
+    padding: 12px 25px;
+    background-color: #4caf50;
     color: white;
-    text-decoration: none;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .termos-button:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+.termos-button:hover {
+    background-color: #388e3c;
+}
